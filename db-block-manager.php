@@ -229,9 +229,7 @@ class DB_Block_Manager {
 
 		</div>
 			<script>
-			  $(function() {
-   			 $('[data-toggle="tooltip"]').tooltip();
-				});
+				jQuery('[data-toggle="tooltip"]').tooltip();
 			</script>
 		<?php
 		// Hook to render modals
