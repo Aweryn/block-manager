@@ -31,10 +31,6 @@ jQuery(function($) {
     });
   });
 
-  $(function() {
-    $('[data-toggle="tooltip"]').tooltip();
-  });
-
   $(".db_delete_block").on("click", function(e) {
     e.preventDefault();
 

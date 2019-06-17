@@ -106,10 +106,11 @@ class DB_Block_Manager {
 		wp_register_style( 'bootstrap.css', plugins_url("node_modules/bootstrap/dist/css/bootstrap.min.css",__FILE__), false, '1.0.0' );
 		wp_register_script( 'bootstrap.js', plugins_url("node_modules/bootstrap/dist/js/bootstrap.min.js",__FILE__), false, '1.0.0' );
 
-		wp_enqueue_script( 'popper.js' );
-
 		global $pagenow;
 		if(($pagenow == 'admin.php') && (get_current_screen()->base == 'toplevel_page_db-block-manager')) {
+
+			wp_enqueue_script( 'popper.js' );
+
 			wp_enqueue_style( 'bootstrap.css' );
 			wp_enqueue_script( 'bootstrap.js' );
 		}
@@ -227,7 +228,11 @@ class DB_Block_Manager {
 			</div>
 
 		</div>
-
+			<script>
+			  $(function() {
+   			 $('[data-toggle="tooltip"]').tooltip();
+				});
+			</script>
 		<?php
 		// Hook to render modals
 		do_action('render_modal_new_block'); ?>
