@@ -9,6 +9,14 @@ if ( !class_exists('DB_Init') ) {
 
     function _construct() {
       $this->$block_path = '../blocks';
+
+      // Create file
+      $dir = WP_PLUGIN_DIR.'/db-block-manager/inc/blocks';
+
+      if (!file_exists($dir)) {
+          mkdir($dir, 0777, true);
+      }
+
     }
 
     public static function init() {
@@ -92,7 +100,7 @@ if ( !class_exists('DB_Init') ) {
             "title"				=> $d['title'],
             "description"		=> $d['description'],
             "render_template"	=> get_template_directory() . "/views/blocks/". $d['name'] . ".php",
-            "category"			=> $d['category'],
+            "category"			=> 'common',
             "icon"				=> "admin-page",
           ));
 
