@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.1",
+    "popper.js": "^1.15.0"
+  },
+  "scripts": {
+    "scss": "node-sass --include-path scss scss/main.scss css/main.css",
+    "watch": "nodemon -e scss -x \"npm run scss\""
+  }
+}

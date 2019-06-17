@@ -1,0 +1,25 @@
+body,
+html {
+  background: #f1f1f1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content-wrap {
+  background: white;
+  margin-right: 20px;
+  margin-top: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+
+  table {
+    tr {
+      td {
+        vertical-align: middle;
+      }
+    }
+
+    .btn {
+      padding: 0;
+      color: red;
+    }
+  }
+}

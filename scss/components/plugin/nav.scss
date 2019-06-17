@@ -1,0 +1,28 @@
+#block-nav {
+  background: $color-blue;
+
+  nav {
+    ul {
+      margin: 0;
+      list-style: none;
+
+      li {
+        margin-bottom: 0 !important;
+        display: inline-flex;
+
+        a {
+          color: white;
+          text-decoration: none;
+          border-right: 1px solid rgba(255, 255, 255, 0.3);
+          transition: all 0.12s ease-out;
+          padding: 15px;
+
+          &:hover {
+            background: #61aace;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
